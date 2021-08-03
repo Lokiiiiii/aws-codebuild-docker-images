@@ -9,7 +9,9 @@
 # This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 # See the License for the specific language governing permissions and limitations under the License.
 
-FROM nvidia/cuda:10.2-cudnn8-devel-ubuntu18.04 AS core
+ARG BASE="nvidia/cuda:10.2-cudnn8-devel-ubuntu18.04" 
+
+FROM $BASE AS core
 
 ENV DEBIAN_FRONTEND="noninteractive"
 
